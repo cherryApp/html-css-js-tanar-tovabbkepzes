@@ -1,0 +1,103 @@
+/* Betűtípus meghatározása. */
+@font-face {
+  font-family: 'Robi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/Roboto/Roboto-Light.ttf')
+}
+
+/* Elem alapján való kiválasztás. */
+body {
+    background-color: darkgrey;
+}
+
+/* Osztály alapján való kiválasztás. */
+.main-div {
+    margin: 30px auto;
+    width: 300px;
+}
+.main-div h1 {
+    font-family: 'Robi', sans-serif;
+}
+
+.color-gray {
+    color: gray;
+}
+
+/* Specifikált kiválasztás, több tulajdonság alapján ugyanaz az elem. */
+form#reg-form {
+    background: lightgrey;
+    padding: 15px;
+    color: black;
+}
+
+/* Beágyazott elemek keresése és lista. */
+#reg-form input,
+#reg-form select,
+#reg-form textarea {
+    width: 100%;
+    height: 34px;
+    border-radius: 4px;
+    border-color: rgba(183, 51, 183, 0.72);
+}
+#reg-form select {
+    height: auto;
+}
+
+/* Csak a közvetelen gyerekek kiválasztása. */
+.main-div > p {
+    text-decoration: underline;
+}
+
+/* Kiválasztás tulajdonság (attribútum) alapján. */
+#reg-form input[type="email"] {
+    font-style: italic;
+}
+
+#reg-form input[required] {
+    box-shadow: 0 0 7px red;
+}
+
+/* Pszeudo szelektorok. */
+#reg-form input[type="email"]:hover {
+    font-size: 16px;
+}
+#reg-form input[type="email"]:focus {
+    font-weight: bold;
+}
+#reg-form select option {
+    font-style: italic;
+}
+#reg-form select option:first-child,
+#reg-form select option:last-child {
+    font-style: normal;
+    font-weight: bold;
+}
+#reg-form select option:nth-child(odd) {
+    background-color: beige;
+}
+#reg-form select option:nth-child(3) {
+    background-color: red;
+}
+#reg-form select option:nth-child(3n+10) {
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

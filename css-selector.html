@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML - űrlapok</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto|Shrikhand" rel="stylesheet"> -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="main-div">
+            <h1 style="font-weight: normal;">Űrlapok</h1>
+            <p>adja meg az adatokat a regisztrációhoz</p>
+            <form id="reg-form" method="post">
+                <input type="hidden" name="token" value="dlskfjlsdjkf3255235">
+                <label for="emailId">email</label>
+                <br>
+                <input class="form-control" id="emailId" type="email" name="useremail" value="email@email.hu">
+                <br>
+                <label>jelszó</label>
+                <br>
+                <input type="password" name="userpassword" required>
+                <br>
+                <label>születési idő</label>
+                <br>
+                <input type="date" name="birthdate">
+                <br>
+                <label>születési idő</label>
+                <br>
+                <input type="file" name="profileimage">
+                <br>
+                <input id="agreeInput" type="checkbox" name="agree" checked>
+                <label for="agreeInput">elfogadom a szabályzatot</label>
+                <br>
+                <label>szakterület</label>
+                <br>
+                <label>
+                    <input name="job" value="programozó" type="radio"> programozó
+                </label>
+                <br>
+                <label>
+                    <input name="job" value="tanár" type="radio" checked disabled> tanár
+                </label>
+                <br>
+                <label>
+                    <input name="job" value="mérnök" type="radio"> mérnök
+                </label>
+                <br>
+                <label for="erdeklodes">Érdeklődési kör</label>
+                <br>
+                <select id="erdeklodes" name="erdeklodes" size="10" multiple>
+                    <option selected value="notset">válasszon...</option>
+                    <option value="1">sport</option>
+                    <option value="2">színház</option>
+                    <option value="3">festészet</option>
+                    <option value="4">szobrászat</option>
+                    <option value="5">kémia</option>
+                    <option value="6">fizika</option>
+                </select>
+                <br>
+                <label for="megjegyzes">Megjegyzes</label>
+                <br>
+                <textarea id="megjegyzes" name="megjegyzes" rows="4" cols="50" 
+                          style="width: 100%; height: 200px; resize: vertical;"></textarea>
+                <br><br>
+                <p>ha készen van kattintson a gombra</p>
+                <input type="submit" value="regisztráció">
+            </form>
+        </div>
+        
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+

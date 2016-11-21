@@ -1,0 +1,19 @@
+.blue {
+    background-color: aqua;
+    padding: 20px;
+}
+.grey {
+    background-color: grey;
+    padding: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .blue {
+        background-color: #3d8484;
+        padding: 20px;
+    }
+}
+
+.alert span.glyphicon {
+    font-size: 0.7em;
+}

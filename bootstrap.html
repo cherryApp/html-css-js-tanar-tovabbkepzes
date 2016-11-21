@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap alapok</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Bootstrap</h1>
+                <p>webfejlesztés a gyakorlatban</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">tovább...</a></p>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-file"></span> szavazás</button>
+                    <button class="btn btn-info">
+                        <span class="glyphicon glyphicon-cloud-download"></span> lekérés 
+                        <span class="badge">110</span>    
+                    </button>
+                    <button class="btn btn-primary">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> mentés</button>
+                    <button class="btn btn-warning">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span> figyelmeztetés</button>
+                    <button class="btn btn-danger">
+                        <span class="glyphicon glyphicon-fire"></span> hiba</button>
+                    <button class="btn btn-success">
+                        <span class="glyphicon glyphicon-check"></span> rendben</button>
+                    <button class="btn btn-link">
+                        <span class="glyphicon glyphicon-forward"></span> tovább</button>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table table-hover table-bordered table-condensed">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info">
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr class="danger">
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr class="success">
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <h2>Űrlapok</h2>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Regisztráció</h3> </div>
+                        <div class="panel-body">                        
+                            <form method="get" action="/">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Jelszó</label>
+                                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" 
+                                        pattern="[A-Z]{1}[a-z]{1}[0-9]{1}.{2,4}" title="nem jó jelszó" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputJob">Munka</label>
+                                    <select id="exampleInputJob" name="job" class="form-control">
+                                        <option>programozó</option>
+                                        <option>tanár</option>
+                                        <option>vadakat terelő juhász</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="btn btn-info" for="exampleInputFile">profile image</label>
+                                    <input class="hidden" type="file" id="exampleInputFile">
+                                    <p class="help-block">válassza ki a profilképet</p>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="interest" type="radio" value="1" checked> Sport
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="interest" type="radio" value="2"> Informatika
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input name="interest" type="radio" value="3"> Politika
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="checkme" type="checkbox"> elfogadom a feltételeket
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-ok"></span> küldés
+                                </button>
+
+                                <div class="alert alert-warning alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                </div>
+                                <div class="alert alert-danger alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                </div>
+                                <div class="alert alert-info alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                </div>
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true" class="glyphicon glyphicon-remove-circle"></span>
+                                    </button>
+                                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        
+        <script src="lib/jquery-3.1.1.min.js"></script>
+        <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

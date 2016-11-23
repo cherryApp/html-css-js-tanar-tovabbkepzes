@@ -39,7 +39,7 @@ function setPopovers() {
 };
 
 // Student json beolvasása.
-$.getJSON('/js/students.csv', function(studentDB) {
+$.getJSON('/js/students.json', function(studentDB) {
     // Tanulók példányosítása.
     for(var k in studentDB.students) {
         students.push( new student(studentDB.students[k]) );

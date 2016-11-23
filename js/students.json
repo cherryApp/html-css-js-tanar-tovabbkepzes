@@ -1,0 +1,48 @@
+{
+    "className": "10E",
+    "room": "2.em 25",
+    "classMaster": "Kiss Tamásné",
+    "students": [
+        {
+            "name": "Nagy Béla",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Kiss Ramóna",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Szabó Richárd",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Németh Géza",
+            "age": "16",
+            "myClass": "10B"
+        },{
+            "name": "Savanyú Bertalan",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Pelcz Lídia",
+            "age": "16",
+            "myClass": "10B"
+        },{
+            "name": "Orosházi Bálint",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Kun-Szabó Zsolt",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Kecskeméti Péter",
+            "age": "15",
+            "myClass": "10B"
+        },{
+            "name": "Zalaegerszegi Márta",
+            "age": "15",
+            "myClass": "10B"
+        }
+    ]
+}

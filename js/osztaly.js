@@ -13,8 +13,27 @@ var student = function(settings) {
 };
 
 // CSV to JSON
-function csvToJson(csv) {
-    // 
+function csvToJson(csv, sep) {
+    sep = sep || ',';
+    var arr = [];
+    
+    // Sorok kiolvasása.
+    var csvRows = csv.split("\n");
+    
+    // Kulcsok kiolvasása.
+    var keys = csvRows[0].split(sep);
+    
+    // Adatsorok objektumokba mentése.
+    for (var i = 1; i < csvRows.length; i++) {
+        var row = csvRows[i].split(sep);
+        var obj = {};
+        for (var k in keys) {
+            obj[keys[k]] = row[k];
+        }
+        arr.push(obj);
+    }
+    
+    return JSON.stringify(arr);
 }
 
 // Tanuló köszönése.
@@ -39,23 +58,26 @@ function setPopovers() {
 };
 
 // Student json beolvasása.
-$.getJSON('/js/students.json', function(studentDB) {
+$.get('/js/students.csv', function(studentDB) {
+    studentDB = csvToJson(studentDB, ',');
+    studentDB = JSON.parse(studentDB);
+    
     // Tanulók példányosítása.
-    for(var k in studentDB.students) {
-        students.push( new student(studentDB.students[k]) );
+    for(var k in studentDB) {
+        students.push( new student(studentDB[k]) );
     }
     
     // Osztály nevének beállítása.
-    document.querySelector('.navbar-inverse .navbar-brand')
-        .innerHTML = studentDB.className + " osztály";
+    // document.querySelector('.navbar-inverse .navbar-brand')
+        // .innerHTML = studentDB.className + " osztály";
     
     // Osztályfőnök beállítása.
-    document.querySelector('.class-master')
-        .innerHTML = studentDB.classMaster;
+    // document.querySelector('.class-master')
+    //    .innerHTML = studentDB.classMaster;
     
     // Osztály létszám.
-    document.querySelector('.class-members')
-        .innerHTML = students.length;
+    // document.querySelector('.class-members')
+    //     .innerHTML = students.length;
     
     // Tanulók kilistázása.
     var tBody = document.querySelector('.dynamic-table tbody');

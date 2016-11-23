@@ -43,6 +43,10 @@
             "name": "Zalaegerszegi Márta",
             "age": "15",
             "myClass": "10B"
+        },{
+            "name": "Varga Eszter",
+            "age": "15",
+            "myClass": "10B"
         }
     ]
 }
